@@ -2,14 +2,36 @@
 import requests
 import dotenv
 from dotenv import load_dotenv
-
+import pymongo
 
 import os
 load_dotenv()
 
 
 class MongoHandler():
-    pass
+    
+    def __init__(self, dbname, division_name):
+        self.myclient = pymongo.MongoClient("mongodb://127.0.0.1:27017/")
+        self.mydb = self.myclient[dbname]
+        self.schema_name = self.mydb[division_name]
+        
+    
+    def create_doc(self, team_name, total_goals, total_wins, win_percentage):
+        dic = {}
+        dic['Team_Name'] = team_name
+        dic['total_goals'] =  total_goals
+        dic['total_wins'] = total_wins
+        dic['rain_win_percentage'] = win_percentage
+        return self.schema_name.insert_one(dic)
+        
+        
+
+
+
+
+
+
+
 class WeatherGetter():
     def __init__(self):
         self.BASE_URL = 'https://api.darksky.net/'
