@@ -14,11 +14,11 @@ Modelled on a simple [Kanban](https://www.atlassian.com/agile/kanban) process wo
 ||||2|
 ||||3|
 ||||4|
-|5||||
-|6||||
-|7||||
-|8||||
-|9||||
+||||5|
+||||6|
+||||7|
+||||8|
+||||9|
 |10||||
 |11||||
 |12||||
@@ -26,7 +26,7 @@ Modelled on a simple [Kanban](https://www.atlassian.com/agile/kanban) process wo
 |14||||
 
 Your tasks:
- 1. Fork this repository. **[Checkpoint 1]**
+ 1. Fork this repository. **[Checkpoint 1]** 
  2. Change student name in `README.md`.
  3. [Download](https://www.kaggle.com/laudanum/footballdelphi/download) the `Football Delphi` database.
  4. Examine the data dictionary on [kaggle](https://www.kaggle.com/laudanum/footballdelphi). **[Checkpoint 2]**
